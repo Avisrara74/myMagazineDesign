@@ -30,15 +30,20 @@ nav>ul>li {
 	display: inline;
 }
 
+nav>ul>li:not(:first-child) {
+	margin-left: 30px;
+}
+
 header {
 	justify-self: center;
-	margin-top: 70px;
+	margin-top: 60px;
 }
 
 nav.grid-item {
 	margin: 35px 0px 35px 0px;
 	justify-self: center;
 }
+
 
 .content {
 	display: grid;
