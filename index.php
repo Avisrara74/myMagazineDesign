@@ -9,18 +9,18 @@
 		<link rel="stylesheet" type="text/css" href="styles/mediaStyle.css">
 	</head>
 	<body class="container">
-		<header class="grid-item header">
-			<div class="grid-item"><img src="images/logo.png"></div>
-			<nav class="grid-item nav">
-				<ul>
-					<li>Главная</li>
-					<li>Магазин</li>
-					<li>Доставка</li>
-					<li>Контакты</li>
-					<li>English</li>
-				</ul>
-			</nav>
+		<header class="grid-item">
+			<div class="grid-item logo"><img src="images/logo.png"></div>
 		</header>
+		<nav class="grid-item">
+			<ul>
+				<li>Главная</li>
+				<li>Магазин</li>
+				<li>Доставка</li>
+				<li>Контакты</li>
+				<li>English</li>
+			</ul>
+		</nav>
 		<main class="content">
 			<div class="grid-item grid-item1"><img src="images/1.jpg" class="content-img"></div>
 			<div class="grid-item grid-item2"><img src="images/2.jpg" class="content-img"></div>

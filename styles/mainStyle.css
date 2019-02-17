@@ -1,6 +1,7 @@
 body {
 	background-color: #fff;
 	max-width: 1100px;
+	padding: 80px 80px 0px 80px
 	font-family: PT Sans;
     font-weight: 400;
     font-style: normal;
@@ -10,13 +11,33 @@ body {
     margin: 30px auto 30px auto;
 }
 
+header{grid-area: header;}
+nav{grid-area: nav;}
+main{grid-area: main;}
+footer{grid-area: footer;}
+
 .container {
 	display: grid;
 	grid-template-rows: 1fr;
 	grid-template-columns: repeat(3, 1fr);
 	grid-template-areas: "header header header"
+						 "nav nav nav"
 						 "main main main"
 						 "footer footer footer";
+}
+
+nav>ul>li {
+	display: inline;
+}
+
+header {
+	justify-self: center;
+	margin-top: 70px;
+}
+
+nav.grid-item {
+	margin: 35px 0px 35px 0px;
+	justify-self: center;
 }
 
 .content {
@@ -30,25 +51,10 @@ body {
 	grid-area: span 1;
 }
 
-
-header{grid-area: header;}
-main{grid-area: main;}
-footer{grid-area: footer;}
-
-
-.nav>ul>li {
-	display: inline;
-}
-
-
 .content-img {
 	width: 100%;
     height: auto;
     object-fit: cover;
-}
-
-.grid-item {
-	background-color: green;
 }
 
 .footer {
