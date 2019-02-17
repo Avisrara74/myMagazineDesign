@@ -9,9 +9,9 @@
 		<link rel="stylesheet" type="text/css" href="styles/mediaStyle.css">
 	</head>
 	<body class="container">
-		<header class="grid-item">
-			<div class="grid-item grid-item-1"><img src="images/logo.png"></div>
-			<nav class="grid-item grid-item-2">
+		<header class="grid-item header">
+			<div class="grid-item"><img src="images/logo.png"></div>
+			<nav class="grid-item nav">
 				<ul>
 					<li>Главная</li>
 					<li>Магазин</li>
@@ -22,16 +22,16 @@
 			</nav>
 		</header>
 		<main class="content">
-			<div class="grid-item"><img src="images/1.jpg" class="content-img"></div>
-			<div class="grid-item"><img src="images/2.jpg" class="content-img"></div>
-			<div class="grid-item"><img src="images/3.jpg" class="content-img"></div>
-			<div class="grid-item"><img src="images/4.jpg" class="content-img"></div>
-			<div class="grid-item"><img src="images/5.jpg" class="content-img"></div>
-			<div class="grid-item"><img src="images/6.jpg" class="content-img"></div>
-			<div class="grid-item"><img src="images/7.jpg" class="content-img"></div>
-			<div class="grid-item"><img src="images/8.jpg" class="content-img"></div>
-			<div class="grid-item"><img src="images/9.jpg" class="content-img"></div>
+			<div class="grid-item grid-item1"><img src="images/1.jpg" class="content-img"></div>
+			<div class="grid-item grid-item2"><img src="images/2.jpg" class="content-img"></div>
+			<div class="grid-item grid-item3"><img src="images/3.jpg" class="content-img"></div>
+			<div class="grid-item grid-item4"><img src="images/4.jpg" class="content-img"></div>
+			<div class="grid-item grid-item5"><img src="images/5.jpg" class="content-img"></div>
+			<div class="grid-item grid-item6"><img src="images/6.jpg" class="content-img"></div>
+			<div class="grid-item grid-item7"><img src="images/7.jpg" class="content-img"></div>
+			<div class="grid-item grid-item8"><img src="images/8.jpg" class="content-img"></div>
+			<div class="grid-item grid-item9"><img src="images/9.jpg" class="content-img"></div>
 		</main>
-		<footer class="grid-item"></footer>
+		<footer class="grid-item footer">ads</footer>
 	</body>
 </html>
