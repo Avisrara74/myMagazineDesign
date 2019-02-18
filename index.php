@@ -32,6 +32,24 @@
 			<div class="grid-item grid-item8"><a href="#"><img src="images/8.jpg" class="content-img"></a></div>
 			<div class="grid-item grid-item9"><a href="#"><img src="images/9.jpg" class="content-img"></a></div>
 		</main>
-		<footer class="grid-item footer">ads</footer>
+		<footer class="grid-item footer">
+			<p class="news">новости о новых коллекциях</p>
+			<img src="images/cards.png" class="cards">
+			<div class="socialButton">
+				<div class="social vk">
+				    <a href="#" target="_blank"><i class="fa fa-vk fa-2x"></i></a>    
+				</div>
+				<div class="social instagram">
+				    <a href="#" target="_blank"><i class="fa fa-instagram fa-2x"></i></a>
+				</div>
+				<div class="social facebook">
+				    <a href="#" target="_blank"><i class="fa fa-facebook fa-2x"></i></a>    
+				</div>
+			</div>
+			<div class="joinEmail">
+				<input type="text" class="joinText" placeholder="Email Adress">
+				<a href="#" class="joinButton"><button>Подписаться</button></a>
+			</div>
+		</footer>
 	</body>
 </html>

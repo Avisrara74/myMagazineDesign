@@ -1,7 +1,64 @@
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+.social a {
+    text-align: center;
+    width: 25px;
+    height: 25px;
+    float: left;
+    background: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15), inset 0 0 50px rgba(0,0,0,0.1);
+    border-radius: 46px;
+    margin: 0 10px 10px 0;
+    padding: 6px;
+    color: #000;
+}
+
+.instagram a:hover {background: #3f729b; color: #fff;}
+.facebook a:hover {background: #3b5998; color: #fff;}
+.vk a:hover {background: #5d84ae; color: #fff;}
+
+
+.joinButton>button {
+  color: #878787;
+  font-weight: 700;
+  text-decoration: none;
+  padding: .4em 2em;
+  outline: none;
+  border: 2px solid #878787;
+  transition: 0.2s;
+  background-color: white;
+  text-align: center;
+  height: 61px;
+  width: 176px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: normal;
+
+} 
+.joinButton>button:hover { background-color: #878787; color: #fff; }
+.joinButton>button:active { opacity: 0.5 }
+
+.joinText {
+  color: black;
+  text-decoration: none;
+  user-select: none;
+  padding: .4em 1.2em;
+  outline: none;
+  border: 1px solid gray;
+  transition: 0.2s;
+  opacity: 0.5;
+  background-color: white;
+  height: 40px;
+  width: 200px;
+  font-weight: normal;
+} 
+
+
+/*My code ---------------------------------------*/
 body {
 	background-color: #fff;
 	max-width: 1100px;
-	padding: 80px 80px 0px 80px
+	padding: 0px 8vw 0px 8vw;
 	font-family: PT Sans;
     font-weight: 400;
     font-style: normal;
@@ -24,6 +81,10 @@ footer{grid-area: footer;}
 						 "nav nav nav"
 						 "main main main"
 						 "footer footer footer";
+}
+
+.logo {
+	display: block;
 }
 
 nav>ul>li {
@@ -70,6 +131,49 @@ nav.grid-item {
     object-fit: cover;
 }
 
+.news{grid-area: news;}
+.cards{grid-area: cards;}
+.socialButton{grid-area: socialButton;}
+.joinEmail{grid-area: joinEmail;}
+.joinText{grid-area: joinText;}
+.joinButton{grid-area: joinButton;}
+
 .footer {
-	background-color: red;
+	display: grid;
+	grid-template-rows: 1fr;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-areas: "news news news"
+						 "cards socialButton socialButton"
+						 "joinEmail joinEmail joinEmail";
 }
+
+.footer>.news {
+	margin-top: 10vh;
+	text-align: center;
+	font-size: 9px;
+}
+
+.socialButton {
+	display: flex;
+	grid-column: -1 / -3;
+	justify-content: center;
+	margin-left: 30vw;
+}
+
+.joinEmail {
+	display: grid;
+	grid-template-rows: 1fr;
+	grid-template-columns: 1fr;
+	grid-template-areas: "joinText"
+						 "joinButton";
+}
+
+.joinText {
+	justify-self: center;
+	margin: -2vh 0px 2vh 0px;
+}
+.joinButton {
+	justify-self: center;
+}
+
+
