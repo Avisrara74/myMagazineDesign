@@ -34,6 +34,14 @@ nav>ul>li:not(:first-child) {
 	margin-left: 30px;
 }
 
+.navLink {
+	text-decoration: none;
+	color: #263333;
+}
+.navLink:hover {
+	color: red;
+}
+
 header {
 	justify-self: center;
 	margin-top: 60px;
