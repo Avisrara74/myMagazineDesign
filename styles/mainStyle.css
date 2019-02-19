@@ -28,7 +28,7 @@
   transition: 0.2s;
   background-color: white;
   text-align: center;
-  height: 61px;
+  height: 53px;
   width: 176px;
   cursor: pointer;
   text-transform: uppercase;
@@ -164,16 +164,14 @@ nav.grid-item {
 	display: grid;
 	grid-template-rows: 1fr;
 	grid-template-columns: 1fr;
-	grid-template-areas: "joinText"
-						 "joinButton";
-}
-
-.joinText {
+	grid-template-areas: "joinText joinButton";
 	justify-self: center;
 	margin: -2vh 0px 2vh 0px;
+
 }
+
 .joinButton {
-	justify-self: center;
+	margin-left: 5px;
 }
 
 
