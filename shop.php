@@ -30,3 +30,4 @@
 		</ul>
 	</li>
 </ul>
+<input type="text" class="" placeholder="Поиск">
