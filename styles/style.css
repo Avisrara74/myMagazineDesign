@@ -1,0 +1,318 @@
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+.social a {
+    text-align: center;
+    width: 25px;
+    height: 25px;
+    float: left;
+    background: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15), inset 0 0 50px rgba(0,0,0,0.1);
+    border-radius: 46px;
+    margin: 0 10px 10px 0;
+    padding: 6px;
+    color: #000;
+}
+
+.instagram a:hover {background: #3f729b; color: #fff;}
+.facebook a:hover {background: #3b5998; color: #fff;}
+.vk a:hover {background: #5d84ae; color: #fff;}
+
+
+.joinButton>button {
+  color: #878787;
+  font-weight: 700;
+  text-decoration: none;
+  padding: .4em 2em;
+  outline: none;
+  border: 2px solid #878787;
+  transition: 0.2s;
+  background-color: white;
+  text-align: center;
+  height: 53px;
+  width: 176px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: normal;
+
+} 
+.joinButton>button:hover { background-color: #878787; color: #fff; }
+.joinButton>button:active { opacity: 0.5 }
+
+.joinText {
+  color: black;
+  text-decoration: none;
+  user-select: none;
+  padding: .4em 1.2em;
+  outline: none;
+  border: 1px solid gray;
+  transition: 0.2s;
+  opacity: 0.5;
+  background-color: white;
+  height: 40px;
+  width: 200px;
+  font-weight: normal;
+} 
+
+/*My code ---------------------------------------*/
+body {
+	background-color: #fff;
+	max-width: 1100px;
+	padding: 0px 8vw 0px 8vw;
+	font-family: PT Sans;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 30px auto 30px auto;
+}
+
+/* container areas ----------> */
+header{grid-area: header;}
+nav{grid-area: nav;}
+main{grid-area: main;}
+footer{grid-area: footer;}
+
+.mobileMenuLink {display: none;}
+
+.container {
+	display: grid;
+	grid-template-rows: 1fr;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-areas: "header header header"
+						 "nav nav nav"
+						 "main main main"
+						 "footer footer footer";
+}
+
+.logo {
+	display: block;
+}
+
+.logo>img {
+	width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+nav>ul>li {
+	display: inline;
+}
+
+nav>ul>li:not(:first-child) {
+	margin-left: 30px;
+}
+
+.navLink {
+	text-decoration: none;
+	color: #263333;
+}
+.navLink:hover {
+	color: red;
+}
+
+header {
+	justify-self: center;
+	margin-top: 60px;
+}
+
+nav.grid-item {
+	margin: 35px 0px 35px 0px;
+	justify-self: center;
+}
+
+
+/* styles for some mains */
+main {
+	display: grid;
+    grid-template-columns: repeat(3, minmax(174px, auto));
+    grid-template-rows: repeat(3, minmax(174px, auto));
+    grid-gap: 34px;
+}
+
+main.grid-item {
+	grid-area: span 1;
+}
+
+.content-img {
+	width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* footer areas -------> */
+.news{grid-area: news;}
+.cards{grid-area: cards;}
+.socialButtons{grid-area: socialButton;}
+.joinEmail{grid-area: joinEmail;}
+.joinText{grid-area: joinText;}
+.joinButton{grid-area: joinButton;}
+
+footer {
+	display: grid;
+	grid-template-rows: 1fr;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-areas: "news news news"
+						 "cards socialButton socialButton"
+						 "joinEmail joinEmail joinEmail";
+}
+
+footer>.news {
+	margin-top: 10vh;
+	text-align: center;
+	font-size: 9px;
+}
+
+.socialButtons {
+	display: flex;
+	grid-column: -1 / -3;
+	justify-content: center;
+	margin-left: 25vw;
+}
+
+.joinEmail {
+	display: grid;
+	grid-template-rows: 1fr;
+	grid-template-columns: 1fr;
+	grid-template-areas: "joinText joinButton";
+	justify-self: center;
+	margin: -2vh 0px 2vh 0px;
+
+}
+
+.joinButton {
+	margin-left: 5px;
+}
+
+@media (max-width: 1215px) {
+	.joinEmail {
+		grid-template-areas: "joinText"
+							 "joinButton";
+	}
+	.joinButton {
+		margin: 2vh 0px 0px 0px;
+		justify-self: center;
+	}
+}
+
+@media (max-width: 767px) {
+	footer {
+		grid-template-rows: 1fr;
+		grid-template-columns: 1fr;
+		grid-template-areas: "cards"
+							 "news"
+							 "joinEmail"
+							 "socialButtons";
+	}
+	.cards {
+		justify-self: center;
+		margin-top: 6vh;
+	}
+	footer>.news {
+		margin-top: 6vh; 
+	}
+	.joinEmail {
+		margin-top: 3vh;
+		grid-template-areas: "joinText joinButton";
+	}
+	.joinButton {
+		margin: 0px 0px 0px 1vw;
+	}
+	.socialButtons {
+		justify-content: center;
+		margin: 0;
+		margin-top: 6vh;
+	}
+
+	/* For some mains */
+
+	main {
+		grid-template-columns: 1fr;
+    	grid-template-rows: 1fr;
+	}
+}
+
+@media (max-width: 675px) {
+	nav>ul>li:not(:first-child) {
+		margin-left: 22px;
+	}
+}
+
+@media (min-width: 641px){
+	#mobileNav {
+		display: none;
+	}
+
+}
+	
+@media (max-width: 640px) {
+	/* mobile menu areas --------> */
+	#mobileNav{grid-area: mobileNav;}
+	.mobileMenuLink{grid-area: mobileMenuLink;}
+	.logoLink{grid-area: logoLink;}
+
+	.container {
+		margin-top: 10px;
+	}
+	header {
+		grid-template-areas: "mobileNav"
+							 "mobileMenuLink"
+							 "logoLink";
+	width: 100%;
+	margin: 0px 0px 3.5vh 0px;
+	}
+	.mainNav {
+		display: none;
+	}
+	.mobileMenuLink, .logoLink {
+		display: block;
+		text-align: center;
+		width: 100%;
+	}
+	.mobileMenuLink2 {
+		text-transform: uppercase;
+		font-size: 16px;
+		font-weight: 400px;
+		text-decoration: none;
+		color: #263333;
+	}
+	.logoLink {
+		margin-top: 3vh;
+	}
+	nav>ul>li{
+		display: block;
+		text-align: center;
+		margin-left: 0px !important;
+		font-size: 16px;
+		opacity: 0.8;
+	}
+	nav>ul>li:not(:first-child) {
+		margin-top: 2vh;
+	}
+	nav.grid-item {
+		margin-top: 0px;
+	}
+	
+	nav>ul {
+		padding: 0px;
+	}
+}
+
+@media (max-width: 521px) {
+	.joinEmail {
+		grid-template-areas: "joinText"
+							 "joinButton";
+	}
+	.joinButton {
+		margin-top: 1vh;
+	}
+}
+@media (max-width: 320px) {
+	.joinText {
+		width: 120px;
+		margin: auto;
+	}
+}
+
+
+
