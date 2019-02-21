@@ -123,14 +123,15 @@ nav.grid-item {
 
 
 /* styles for some mains */
-main {
+/* mainIndex*/
+.mainIndex {
 	display: grid;
     grid-template-columns: repeat(3, minmax(174px, auto));
     grid-template-rows: repeat(3, minmax(174px, auto));
     grid-gap: 34px;
 }
 
-main.grid-item {
+.mainIndex>.grid-item {
 	grid-area: span 1;
 }
 
@@ -139,6 +140,44 @@ main.grid-item {
     height: auto;
     object-fit: cover;
 }
+
+/* mainShop */
+.mainShop {
+	display: grid;
+	max-width: 945px;
+	justify-self: center;
+}
+.shopSearch {
+	width: 350px;
+	height: 35px;
+}
+
+.shop-items {
+	display: grid;
+	grid-template-columns: repeat(4, minmax(154px, auto));
+    grid-template-rows: repeat(2, minmax(154px, auto));
+    grid-gap: 17px;
+    margin-top: 10vh;
+    max-width: 945px;
+}
+
+.shop-item {
+	overflow:hidden;
+}
+
+/* img hover increase */
+.increase img {
+ -moz-transition: all 0.2s ease-out;
+ -o-transition: all 0.2s ease-out;
+ -webkit-transition: all 0.2s ease-out;
+ }
+ 
+.increase img:hover{
+ -webkit-transform: scale(1.1);
+ -moz-transform: scale(1.1);
+ -o-transform: scale(1.1);
+ }
+
 
 /* footer areas -------> */
 .news{grid-area: news;}
@@ -226,7 +265,7 @@ footer>.news {
 
 	/* For some mains */
 
-	main {
+	.mainIndex {
 		grid-template-columns: 1fr;
     	grid-template-rows: 1fr;
 	}

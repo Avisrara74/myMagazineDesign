@@ -5,7 +5,7 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" type="text/css" href="styles/style.css">
-		<link rel="stylesheet" type="text/css" href="styles/mediaStyle.css">
+		<link rel="stylesheet" type="text/css" href="styles/shopUl.css">
 	</head>
 	<body class="container">
 		<header class="grid-item">
@@ -38,14 +38,22 @@
 		</header>
 		<nav class="grid-item mainNav">
 			<ul>
-				<li><a href="#" class="navLink">Главная</a></li>
-				<li><a href="#" class="navLink">Магазин</a></li>
+				<li><a href="/index.php" class="navLink">Главная</a></li>
+				<li><a href="/index.php?page=shop" class="navLink">Магазин</a></li>
 				<li><a href="#" class="navLink">Доставка</a></li>
 				<li><a href="#" class="navLink">Контакты</a></li>
 				<li><a href="#" class="navLink">English</a></li>
 			</ul>
 		</nav>
-		<?php include 'main.php'; ?>
+		<?php 
+			$page = $_GET['page'];
+			if (!isset($page)) {
+				require('main.php');
+			} elseif ($page == 'shop') {
+				require('shop.php');
+			}
+
+		?>
 		<footer class="grid-item">
 			<p class="news">новости о новых коллекциях</p>
 			<img src="images/cards.png" class="cards">
