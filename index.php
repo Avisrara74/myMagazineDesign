@@ -13,10 +13,10 @@
 		<div class="grid-item" id="mobileNav" style="display: none;">
 			<nav class="grid-item">
 				<ul>
-					<li><a href="#" class="navLink" title="Главная">Главная</a></li>
-					<li><a href="#" class="navLink" title="Магазин">Магазин</a></li>
-					<li><a href="#" class="navLink" title="Доставка">Доставка</a></li>
-					<li><a href="#" class="navLink" title="Контакты">Контакты</a></li>
+					<li><a href="/index.php" class="navLink" title="Главная">Главная</a></li>
+					<li><a href="/index.php?page=shop" class="navLink" title="Магазин">Магазин</a></li>
+					<li><a href="/index.php?page=delivery" class="navLink" title="Доставка">Доставка</a></li>
+					<li><a href="/index.php?page=contact" class="navLink" title="Контакты">Контакты</a></li>
 					<li><a href="#" class="navLink" title="Сменить язык">English</a></li>
 				</ul>
 			</nav>
@@ -40,8 +40,8 @@
 			<ul>
 				<li><a href="/index.php" class="navLink" title="Главная">Главная</a></li>
 				<li><a href="/index.php?page=shop" class="navLink" title="Магазин">Магазин</a></li>
-				<li><a href="#" class="navLink" title="Доставка">Доставка</a></li>
-				<li><a href="#" class="navLink" title="Контакты">Контакты</a></li>
+				<li><a href="/index.php?page=delivery" class="navLink" title="Доставка">Доставка</a></li>
+				<li><a href="/index.php?page=contact" class="navLink" title="Контакты">Контакты</a></li>
 				<li><a href="#" class="navLink" title="Сменить язык">English</a></li>
 			</ul>
 		</nav>
@@ -51,6 +51,10 @@
 				require('main.php');
 			} elseif ($page == 'shop') {
 				require('shop.php');
+			} elseif ($page == 'delivery') {
+				require('delivery.php');
+			} elseif ($page == 'contact') {
+				require('contact.php');
 			}
 
 		?>
