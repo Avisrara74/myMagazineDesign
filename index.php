@@ -13,16 +13,16 @@
 		<div class="grid-item" id="mobileNav" style="display: none;">
 			<nav class="grid-item">
 				<ul>
-					<li><a href="#" class="navLink">Главная</a></li>
-					<li><a href="#" class="navLink">Магазин</a></li>
-					<li><a href="#" class="navLink">Доставка</a></li>
-					<li><a href="#" class="navLink">Контакты</a></li>
-					<li><a href="#" class="navLink">English</a></li>
+					<li><a href="#" class="navLink" title="Главная">Главная</a></li>
+					<li><a href="#" class="navLink" title="Магазин">Магазин</a></li>
+					<li><a href="#" class="navLink" title="Доставка">Доставка</a></li>
+					<li><a href="#" class="navLink" title="Контакты">Контакты</a></li>
+					<li><a href="#" class="navLink" title="Сменить язык">English</a></li>
 				</ul>
 			</nav>
 		</div>
 		<a href="#" onclick="openMenu()" class="mobileMenuLink2">
-			<div class="grid-item mobileMenuLink">Menu</div>
+			<div class="grid-item mobileMenuLink" title="Открыть/закрыть меню">Menu</div>
 		</a>
 		<script>
 			function openMenu() {
@@ -38,11 +38,11 @@
 		</header>
 		<nav class="grid-item mainNav">
 			<ul>
-				<li><a href="/index.php" class="navLink">Главная</a></li>
-				<li><a href="/index.php?page=shop" class="navLink">Магазин</a></li>
-				<li><a href="#" class="navLink">Доставка</a></li>
-				<li><a href="#" class="navLink">Контакты</a></li>
-				<li><a href="#" class="navLink">English</a></li>
+				<li><a href="/index.php" class="navLink" title="Главная">Главная</a></li>
+				<li><a href="/index.php?page=shop" class="navLink" title="Магазин">Магазин</a></li>
+				<li><a href="#" class="navLink" title="Доставка">Доставка</a></li>
+				<li><a href="#" class="navLink" title="Контакты">Контакты</a></li>
+				<li><a href="#" class="navLink" title="Сменить язык">English</a></li>
 			</ul>
 		</nav>
 		<?php 
@@ -56,21 +56,21 @@
 		?>
 		<footer class="grid-item">
 			<p class="news">новости о новых коллекциях</p>
-			<img src="images/cards.png" class="cards">
+			<img src="images/cards.png" class="cards" title="Способы оплаты">
 			<div class="socialButtons">
 				<div class="social vk">
-				    <a href="#" target="_blank"><i class="fa fa-vk fa-2x"></i></a>    
+				    <a href="#" target="_blank" title="Группа вконтакте"><i class="fa fa-vk fa-2x"></i></a>    
 				</div>
 				<div class="social instagram">
-				    <a href="#" target="_blank"><i class="fa fa-instagram fa-2x"></i></a>
+				    <a href="#" target="_blank" title="Инстаграмм"><i class="fa fa-instagram fa-2x"></i></a>
 				</div>
 				<div class="social facebook">
-				    <a href="#" target="_blank"><i class="fa fa-facebook fa-2x"></i></a>    
+				    <a href="#" target="_blank" title="Группа Facebook"><i class="fa fa-facebook fa-2x"></i></a>    
 				</div>
 			</div>
 			<div class="joinEmail">
-				<input type="text" class="joinText" placeholder="Email Adress">
-				<a href="#" class="joinButton"><button>Подписаться</button></a>
+				<input type="text" class="joinText" placeholder="Email Adress" title="Ввести Email">
+				<a href="#" class="joinButton" title="Подписаться на новости"><button>Подписаться</button></a>
 			</div>
 		</footer>
 	</body>
