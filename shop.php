@@ -47,4 +47,10 @@
 		<div class="shop-item increase"><a href="#"><img src="images/shop/7.jpg" class="content-img" title="Вещи со скидками"></a></div>
 		<div class="shop-item increase"><a href="#"><img src="images/shop/8.jpg" class="content-img" title="Подарочные сертификаты"></a></div>
 	</div>
+
+	<div class="bottomButtons">
+		<a href="#" class="searchLink"><div class="searchButton"><img src="/images/shop/search.png"><p>Поиск</p></div></a>
+		<a href="#" class="likeLink"><div class="likeButton"><img src="/images/shop/like.png"><p>Избранное</p></div></a>
+		<a href="#" class="basketLink"><div class="basketButton"><img src="/images/shop/shop-basket.png"><p>Корзина</p></div></a>
+	</div>
 </main>

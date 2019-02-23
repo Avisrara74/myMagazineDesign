@@ -147,9 +147,17 @@ nav.grid-item {
 	max-width: 945px;
 	justify-self: center;
 }
+
 .shopSearch {
-	width: 350px;
-	height: 35px;
+	background-image: url('/images/shop/search.png');   
+    background-repeat: no-repeat;  
+    background-position: 330px;
+    background-size: 7%; 
+    outline: none;  
+    padding-left: 10px;
+    width: 350px;
+	height: 30px;
+	font-size: 16px;
 }
 
 .shop-items {
@@ -164,6 +172,38 @@ nav.grid-item {
 .shop-item {
 	overflow:hidden;
 }
+
+.bottomButtons {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: 1fr;
+	grid-gap: 70px;
+	justify-self: center;
+	margin: 10vh auto 10vh auto;
+}
+
+.bottomButtons a {
+	text-decoration: none;
+	color: #999;
+}
+.bottomButtons a:hover {
+	color: #00ddff;
+	-moz-transition: all 0.2s ease-out;
+	-o-transition: all 0.2s ease-out;
+	-webkit-transition: all 0.2s ease-out;
+}
+
+.bottomButtons a {
+	text-align: center;
+}
+.bottomButtons a div img {
+	margin-left: -5px;
+}
+
+
+
+
+
 
 /* img hover increase */
 .increase img {
