@@ -317,11 +317,10 @@ nav.grid-item {
 	margin-top: -10px;
 }
 
-/* mainContact */
+/* contact.php */
 
 .mainContact {
 	grid-template-columns: repeat(3, minmax(200px, 350px));
-	
 }
 .mainContact p {
 	grid-column: 2 / 4;
@@ -332,6 +331,20 @@ nav.grid-item {
 
 .mainContact iframe {
 	margin-left: 0px !important;
+}
+
+.map-responsive{
+    overflow:hidden;
+    height: 350px;
+}
+
+.map-responsive {
+	grid-column: span 3;
+}
+
+.map-responsive iframe{
+    width:80vw;
+    height: 30vh;
 }
 
 
@@ -664,6 +677,19 @@ footer>.news {
 		margin: 10vh auto 10vh auto;
 	}
 }
+
+@media (max-width: 640px) {
+	.mainContact {
+		grid-template-columns: 1fr;
+		justify-self: center;
+	}
+	.mainContact p {
+		grid-column: 1 / 2;
+		margin-left: 0px;
+	}
+}
+
+
 
 
 
