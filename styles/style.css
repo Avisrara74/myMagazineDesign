@@ -18,7 +18,7 @@
 .vk a:hover {background: #5d84ae; color: #fff;}
 
 
-.joinButton>button {
+.joinButton {
   color: #878787;
   font-weight: 700;
   text-decoration: none;
@@ -35,8 +35,8 @@
   font-weight: normal;
 
 } 
-.joinButton>button:hover { background-color: #878787; color: #fff; }
-.joinButton>button:active { opacity: 0.5 }
+.joinButton:hover { background-color: #878787; color: #fff; }
+.joinButton:active { opacity: 0.5 }
 
 .joinText {
   color: black;
@@ -393,7 +393,7 @@ footer>.news {
 	.mobileMenuLink2 {
 		text-transform: uppercase;
 		font-size: 16px;
-		font-weight: 400px;
+		font-weight: 400;
 		text-decoration: none;
 		color: #263333;
 	}

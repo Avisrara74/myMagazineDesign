@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 	<head>
 		<title>Document</title>
@@ -45,19 +45,7 @@
 				<li><a href="#" class="navLink" title="Сменить язык">English</a></li>
 			</ul>
 		</nav>
-		<?php 
-			$page = $_GET['page'];
-			if (!isset($page)) {
-				require('main.php');
-			} elseif ($page == 'shop') {
-				require('shop.php');
-			} elseif ($page == 'delivery') {
-				require('delivery.php');
-			} elseif ($page == 'contact') {
-				require('contact.php');
-			}
-
-		?>
+		<?php include('/func.php'); ?>
 		<footer class="grid-item">
 			<p class="news">новости о новых коллекциях</p>
 			<img src="images/cards.png" class="cards" title="Способы оплаты">
