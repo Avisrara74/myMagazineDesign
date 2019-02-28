@@ -1,5 +1,4 @@
-<main class="mainShop">
-	<div id="menu-trigger">Меню</div>    
+<main class="mainShop">  
 		<ul id="menu">
 			<li class="first-li"><a href="#" title="Новые поступления">Новые поступления</a></li>
 			<li>
