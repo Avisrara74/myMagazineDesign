@@ -1,7 +1,7 @@
 <main class="mainShop">
 	<div id="menu-trigger">Меню</div>    
 		<ul id="menu">
-			<li><a href="#" title="Новые поступления">Новые поступления</a></li>
+			<li class="first-li"><a href="#" title="Новые поступления">Новые поступления</a></li>
 			<li>
 				<a href="" title="Платья">Платья</a>
 				<ul>
@@ -28,7 +28,7 @@
 			<li><a href="" title="Юбки и брюки">Юбки и брюки</a></li>
 			<li><a href="" title="Аксессуары">Аксессуары</a></li>
 			<li>
-				<a href="" title="еще 2">еще 2</a>
+				<a href="" title="Акции">Акции</a>
 				<ul>
 				<li><a href="#" title="Вещи со скидкой">Вещи со скидкой</a></li>
 				<li><a href="#" title="Подарочные сертификаты">Подарочные сертификаты</a></li>
