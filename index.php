@@ -34,7 +34,7 @@
 			}
 		</script>	
 	<!-- .............................................. -->
-			<a href="index.php" class="logoLink"><div class="grid-item logo"><img src="images/logo.png"></div></a>
+			<a href="index.php" class="logoLink"><div class="grid-item logo"><img src="images/logo.png" alt="Логотип компании"></div></a>
 		</header>
 		<nav class="grid-item mainNav">
 			<ul>
@@ -74,7 +74,7 @@
 			</div>
 			<div class="joinEmail">
 				<input type="text" class="joinText" placeholder="Email Adress" title="Ввести Email">
-				<a href="#" class="joinButton" title="Подписаться на новости"><button>Подписаться</button></a>
+				<button class="joinButton" title="Подписаться на новости">Подписаться</button>
 			</div>
 		</footer>
 	</body>
