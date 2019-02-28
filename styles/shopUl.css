@@ -15,12 +15,6 @@
 	line-height: 32px;
 }
 
-#menu:before,
-#menu:after {
-	content: "";
-	display: table;
-}
-
 #menu li {
 	float: left;
 	position: relative;
@@ -43,12 +37,12 @@
 	background-color: lightgray;
 }
 
-#menu li:hover > a:first-child {
-	border-radius: 6px 0px 0px 6px;
+#menu:first-child
+
 }
 
-#menu li:hover > a:last-child {
-	border-radius: 0px 6px 6px 0px;
+#menu li>ul>li:hover {
+	border-radius: 3px;
 }
 
 #menu ul {
