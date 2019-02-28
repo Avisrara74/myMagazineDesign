@@ -21,7 +21,7 @@
 			</nav>
 		</div>
 		<a href="#" onclick="openMenu()" class="mobileMenuLink2">
-			<div class="grid-item mobileMenuLink" title="Открыть/закрыть меню">Menu</div>
+			<div class="grid-item mobileMenuLink" title="Открыть/закрыть меню">Меню</div>
 		</a>
 		<script>
 			function openMenu() {
