@@ -36,24 +36,26 @@
 		</ul>
 	<input type="text" class="shopSearch" placeholder="Поиск" title="Поиск">
 
-	<div class="OpenProduct">
-		<a href="#"><img src="/images/shop/shop-items/01.jpg" alt="sss"></a>
-		<a href="#"><img src="/images/shop/shop-items/01.jpg" alt="sss"></a>
-		<a href="#"><img src="/images/shop/shop-items/01.jpg" alt="sss"></a>
-		<a href="#"><img src="/images/shop/shop-items/01.jpg" alt="sss"></a>
-		<div class="selectedImg"></div>
-		<h2>Title</h2>
-		<p>6 800.00р</p>
-		<p>размер</p>
-		<input type="radio" name="size" id="size1"/><label for="dva1">XS(42)</label> 
-		<input type="radio" name="size" id="size2"/><label for="dva2">S(44)</label>
-		<input type="radio" name="size" id="size3"/><label for="dva1">M(46)</label> 
-		<input type="radio" name="size" id="size4"/><label for="dva1">L(48)</label> 
-		<input type="radio" name="size" id="size5"/><label for="dva2">XL(50)</label>
-		<input type="radio" name="size" id="size6"/><label for="dva1">XXL(52)</label> 
-		<button class="toBasket" title="В корзину">В корзину</button>
-		
-
+	<div class="openProduct">
+		<a href="#" class="productItem"><img src="/images/shop/shop-items/01.jpg" class="content-img" alt="sss"></a>
+		<a href="#" class="productItem"><img src="/images/shop/shop-items/012.jpg" class="content-img" alt="sss"></a>
+		<a href="#" class="productItem"><img src="/images/shop/shop-items/13.jpg" class="content-img" alt="sss"></a>
+		<a href="#" class="productItem"><img src="/images/shop/shop-items/14.jpg" class="content-img" alt="sss"></a>
+		<div class="selectedImg productItem">
+			<a href="#"><img src="/images/shop/shop-items/01.jpg" class="content-img" alt="sss"></a>
+		</div>
+		<div class="infoAbout productItem">
+			<h2>Какой-то длинный заголовок типо название платья</h2><br>
+			<p>6 800.00р</p>
+			<h3>размер</h3>
+			<input type="radio" name="size1" class="size"><label for="size1">XS(42)</label><br>
+			<input type="radio" name="size2" class="size"><label for="size2">S(44)</label><br>
+			<input type="radio" name="size3" class="size"><label for="size3">M(46)</label><br> 
+			<input type="radio" name="size4" class="size"><label for="size4">L(48)</label><br> 
+			<input type="radio" name="size5" class="size"><label for="size5">XL(50)</label><br>
+			<input type="radio" name="size6" class="size"><label for="size6">XXL(52)</label><br><br><br>  
+			<button class="toBasket" title="В корзину">В корзину</button>
+		</div>	
 	</div>
 
 	<div class="bottomButtons">
