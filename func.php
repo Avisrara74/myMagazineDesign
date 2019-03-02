@@ -8,5 +8,7 @@
 		require('delivery.php');
 	} elseif ($page == 'contact') {
 		require('contact.php');
+	} elseif ($page == 'shop?=openProduct') {
+		require('openProduct.php');
 	}
 ?>
