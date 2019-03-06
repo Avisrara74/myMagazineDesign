@@ -35,14 +35,14 @@
 			</li>
 		</ul>
 	<input type="text" class="shopSearch" placeholder="Поиск" title="Поиск">
-
+	
 	<div class="openProduct">
-		<a href="#" class="productItem"><img src="/images/shop/shop-items/01.jpg" class="content-img" alt="sss"></a>
-		<a href="#" class="productItem"><img src="/images/shop/shop-items/012.jpg" class="content-img" alt="sss"></a>
-		<a href="#" class="productItem"><img src="/images/shop/shop-items/13.jpg" class="content-img" alt="sss"></a>
-		<a href="#" class="productItem"><img src="/images/shop/shop-items/14.jpg" class="content-img" alt="sss"></a>
+		<img src="/images/shop/shop-items/01.jpg" class="content-img productItem takeThisImg" alt="sss">
+		<img src="/images/shop/shop-items/012.jpg" class="content-img productItem takeThisImg" alt="sss">
+		<img src="/images/shop/shop-items/13.jpg" class="content-img productItem takeThisImg" alt="sss">
+		<img src="/images/shop/shop-items/14.jpg" class="content-img productItem takeThisImg" alt="sss">
 		<div class="selectedImg productItem">
-			<a href="#"><img src="/images/shop/shop-items/01.jpg" class="content-img" alt="sss"></a>
+			<img src="/images/shop/shop-items/01.jpg" class="content-img" id="switchThisImg" alt="sss">
 		</div>
 		<div class="infoAbout productItem">
 			<h2>Какой-то длинный заголовок типо название платья</h2><br>
