@@ -297,12 +297,8 @@ nav.grid-item {
 	max-width: 945px;
 	justify-self: center;
 	margin-top: 4vh;
-	grid-gap: 10px;
+	grid-gap: 1px 5px;
 	margin-bottom: -5vh;
-}
-
-.takeThisImg:active {
-	border: 3px solid black;
 }
 
 .productItem:nth-child(1) {
