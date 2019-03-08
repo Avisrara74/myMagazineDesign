@@ -1,5 +1,6 @@
+<?php include('/connectionDB.php');?>
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 	<head>
 		<title>Document</title>
 		<meta charset="UTF-8">
