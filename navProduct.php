@@ -36,28 +36,20 @@
 		</ul>
 	<input type="text" class="shopSearch" placeholder="Поиск" title="Поиск">
 	
+	<?php 
+		$navProductItem = GET_navProductItems ();
+		$i = 0;
+	?>
+
 	<h2 class="afterNavProduct">Название категории</h2>
 	<div class="navProduct">
-		<div class="navProductItem">
-			<div class="lowIncrease"><a href="#"><img src="/images/shop/shop-items/01.jpg" class="content-img" alt="sss"></a></div>
-			<p><a href="#">Название одежды</a></p>
-			<p>4 500.00p.</p>
-		</div>
-		<div class="navProductItem">
-			<div class="lowIncrease"><a href="#"><img src="/images/shop/shop-items/02.jpg" class="content-img" alt="sss"></a></div>
-			<p><a href="#">Название одежды</a></p>
-			<p>4 500.00p.</p>
-		</div>
-		<div class="navProductItem">
-			<div class="lowIncrease"><a href="#"><img src="/images/shop/shop-items/03.jpg" class="content-img" alt="sss"></a></div>
-			<p><a href="#">Название одежды</a></p>
-			<p>4 500.00p.</p>
-		</div>
-		<div class="navProductItem">
-			<div class="lowIncrease"><a href="#"><img src="/images/shop/shop-items/04.jpg" class="content-img" alt="sss"></a></div>
-			<p><a href="#">Название одежды</a></p>
-			<p>4 500.00p.</p>
-		</div>
+		<?php foreach ($navProductItem as $navProductItems): ?>
+			<div class="navProductItem">
+				<div class="lowIncrease"><a href="#"><img src="/images/shop/shop-items/01.jpg" class="content-img" alt="sss"></a></div>
+				<p><a href="#">Название одежды</a></p>
+				<p>4 500.00p.</p>
+			</div>
+		<?php endforeach; ?>
 	</div>
 
 	<div class="bottomButtons">

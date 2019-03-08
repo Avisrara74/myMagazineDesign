@@ -57,6 +57,10 @@
 			<button class="toBasket" title="В корзину">В корзину</button>
 		</div>	
 	</div>
+	<?php 
+		$openProducts = GET_openProducts($id); 
+		var_dump($openProducts);
+	?>
 
 	<div class="bottomButtons">
 		<a href="#" class="searchLink"><div class="searchButton"><img src="/images/shop/search.png" title="Поиск"><p>Поиск</p></div></a>

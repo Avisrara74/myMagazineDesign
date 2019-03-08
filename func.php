@@ -24,8 +24,19 @@
 			FROM products
 			INNER JOIN images ON images.id_product = products.id GROUP BY images.id_product DESC LIMIT 2, 10";
 		$result = mysqli_query($connection, $sql);
-		$navProductItems = mysqli_fetch_all($result, MYSQLI_ASSOC);
+		$navNewProductItems = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
-		return $navProductItems;
+		return $navNewProductItems;
+	}
+
+	function GET_openProducts ($id) {
+		global $connection;
+		$sql = "SELECT products.id, images.image_way, products.title, products.price 
+			FROM products
+			INNER JOIN images ON images.id_product = products.id WHERE '$id' = products.id";
+		$result = mysqli_query($connection, $sql);
+		$openProducts = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+		return $openProducts;
 	}
 ?>
