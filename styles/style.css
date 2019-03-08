@@ -301,6 +301,10 @@ nav.grid-item {
 	margin-bottom: -5vh;
 }
 
+.takeThisImg:active {
+	border: 3px solid black;
+}
+
 .productItem:nth-child(1) {
 	grid-area: 1 / 1 / 2 / 2;
 }

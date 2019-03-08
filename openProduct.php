@@ -37,10 +37,10 @@
 	<input type="text" class="shopSearch" placeholder="Поиск" title="Поиск">
 	
 	<div class="openProduct">
-		<img src="/images/shop/shop-items/01.jpg" class="content-img productItem takeThisImg" alt="sss">
-		<img src="/images/shop/shop-items/012.jpg" class="content-img productItem takeThisImg" alt="sss">
-		<img src="/images/shop/shop-items/13.jpg" class="content-img productItem takeThisImg" alt="sss">
-		<img src="/images/shop/shop-items/14.jpg" class="content-img productItem takeThisImg" alt="sss">
+		<img src="/images/shop/shop-items/01.jpg" onclick="switchImg1();" class="content-img productItem takeThisImg" alt="sss">
+		<img src="/images/shop/shop-items/012.jpg" onclick="switchImg2();" class="content-img productItem takeThisImg" alt="sss">
+		<img src="/images/shop/shop-items/13.jpg" onclick="switchImg3();" class="content-img productItem takeThisImg" alt="sss">
+		<img src="/images/shop/shop-items/14.jpg" onclick="switchImg4();" class="content-img productItem takeThisImg" alt="sss">
 		<div class="selectedImg productItem">
 			<img src="/images/shop/shop-items/01.jpg" class="content-img" id="switchThisImg" alt="sss">
 		</div>
@@ -64,3 +64,25 @@
 		<a href="#" class="basketLink"><div class="basketButton"><img src="/images/shop/shop-basket.png" title="Корзина"><p>Корзина</p></div></a>
 	</div>
 </main>
+<script>
+	function switchImg1() {
+		let switchOnThisImg = document.getElementsByClassName('takeThisImg')[0].src;
+		let switchThisImg = document.getElementById('switchThisImg').src;
+		document.getElementById('switchThisImg').src = document.getElementById('switchThisImg').src.replace(switchThisImg,switchOnThisImg);
+	}
+	function switchImg2() {
+		let switchOnThisImg = document.getElementsByClassName('takeThisImg')[1].src;
+		let switchThisImg = document.getElementById('switchThisImg').src;
+		document.getElementById('switchThisImg').src = document.getElementById('switchThisImg').src.replace(switchThisImg,switchOnThisImg);
+	}
+	function switchImg3() {
+		let switchOnThisImg = document.getElementsByClassName('takeThisImg')[2].src;
+		let switchThisImg = document.getElementById('switchThisImg').src;
+		document.getElementById('switchThisImg').src = document.getElementById('switchThisImg').src.replace(switchThisImg,switchOnThisImg);
+	}
+	function switchImg4() {
+		let switchOnThisImg = document.getElementsByClassName('takeThisImg')[3].src;
+		let switchThisImg = document.getElementById('switchThisImg').src;
+		document.getElementById('switchThisImg').src = document.getElementById('switchThisImg').src.replace(switchThisImg,switchOnThisImg);
+	}
+</script>
