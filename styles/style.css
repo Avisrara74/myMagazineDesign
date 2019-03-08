@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
 .social a {
     text-align: center;
@@ -288,6 +289,45 @@ nav.grid-item {
 	margin-left: -5px;
 }
 
+/* navProduct.php ----------> */
+
+.navProduct {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(100px, auto));
+	grid-template-rows: minmax(150px, 350px;);
+	max-width: 945px;
+	grid-gap: 30px;
+	justify-self: center;
+	margin: 1.5vh 0px -5vh 0px;
+}
+
+.navProduct img {
+	max-width: 457px;
+	max-height: 630px;
+}
+
+h2.afterNavProduct {
+	margin-top: 7vh;
+}
+
+.navProduct p, .navProduct a {
+	text-align: center;
+	font-size: 20px;
+	text-transform: none;
+	text-decoration: none;
+	color: black;
+}
+
+.navProductItem p:last-child {
+	margin-top: -15px;
+}
+
+
+.navProductItem:hover a {
+	color: #1e7ec8;
+}
+
+
 /* openProduct.php ---------> */
 
 .openProduct {
@@ -420,7 +460,7 @@ nav.grid-item {
 
 
 /* img hover increase */
-.increase img {
+.increase img, .lowIncrease img {
 	-moz-transition: all 0.2s ease-out;
 	-o-transition: all 0.2s ease-out;
 	-webkit-transition: all 0.2s ease-out;
@@ -430,6 +470,12 @@ nav.grid-item {
 	-webkit-transform: scale(1.1);
 	-moz-transform: scale(1.1);
 	-o-transform: scale(1.1);
+ }
+ 
+.lowIncrease img:hover{
+	-webkit-transform: scale(1.03);
+	-moz-transform: scale(1.03);
+	-o-transform: scale(1.03);
  }
 
 

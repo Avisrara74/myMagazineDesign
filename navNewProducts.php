@@ -1,5 +1,5 @@
-<main class="mainShop">  
-		<ul id="menu">
+<main class="mainShop">
+	<ul id="menu">
 			<li class="first-li"><a href="/index.php?page=newProducts" title="Новые поступления">Новые поступления</a></li>
 			<li>
 				<a href="" title="Платья">Платья ↓</a>
@@ -36,15 +36,20 @@
 		</ul>
 	<input type="text" class="shopSearch" placeholder="Поиск" title="Поиск">
 
-	<div class="shop-items">
-		<div class="shop-item increase"><a href="#"><img src="images/shop/1.jpg" class="content-img" title="Новые поступления"></a></div>
-		<div class="shop-item increase"><a href="#"><img src="images/shop/2.jpg" class="content-img" title="Платья"></a></div>
-		<div class="shop-item increase"><a href="#"><img src="images/shop/3.jpg" class="content-img" title="Верхняя одежда"></a></div>
-		<div class="shop-item increase"><a href="#"><img src="images/shop/4.jpg" class="content-img" title="Топы и свитера"></a></div>
-		<div class="shop-item increase"><a href="#"><img src="images/shop/5.jpg" class="content-img" title="Юбки и брюки"></a></div>
-		<div class="shop-item increase"><a href="#"><img src="images/shop/6.jpg" class="content-img" title="Аксуссуары"></a></div>
-		<div class="shop-item increase"><a href="#"><img src="images/shop/7.jpg" class="content-img" title="Вещи со скидками"></a></div>
-		<div class="shop-item increase"><a href="#"><img src="images/shop/8.jpg" class="content-img" title="Подарочные сертификаты"></a></div>
+	<?php 
+		$navNewProductItem = GET_navNewProductItems ();
+		$i = 0;
+	?>
+
+	<h2 class="afterNavProduct">Новые поступления</h2>
+	<div class="navProduct">
+		<?php foreach ($navNewProductItem as $navNewProductItems): ?>
+			<div class="navProductItem">
+				<div class="lowIncrease"><a href="#"><img src="<?php echo $navNewProductItems['image_way']; ?>" class="content-img" alt="sss"></a></div>
+				<p><a href="#"><?php echo $navNewProductItems['title'] ?></a></p>
+				<p><?php echo $navNewProductItems['price'] ?>.00р.</p>
+			</div>
+		<?php endforeach; ?>	
 	</div>
 
 	<div class="bottomButtons">

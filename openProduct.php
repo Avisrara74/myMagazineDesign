@@ -1,6 +1,6 @@
 <main class="mainShop">  
 		<ul id="menu">
-			<li class="first-li"><a href="#" title="Новые поступления">Новые поступления</a></li>
+			<li class="first-li"><a href="/index.php?page=newProducts" title="Новые поступления">Новые поступления</a></li>
 			<li>
 				<a href="" title="Платья">Платья ↓</a>
 				<ul>
@@ -66,8 +66,11 @@
 </main>
 <script>
 	function switchImg1() {
+		// take img what we want
 		let switchOnThisImg = document.getElementsByClassName('takeThisImg')[0].src;
+		// take img what we need switch
 		let switchThisImg = document.getElementById('switchThisImg').src;
+		// replace img
 		document.getElementById('switchThisImg').src = document.getElementById('switchThisImg').src.replace(switchThisImg,switchOnThisImg);
 	}
 	function switchImg2() {
