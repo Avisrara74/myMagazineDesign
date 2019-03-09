@@ -37,7 +37,7 @@
 	<input type="text" class="shopSearch" placeholder="Поиск" title="Поиск">
 
 	<div class="shop-items">
-		<div class="shop-item increase"><a href="#"><img src="images/shop/1.jpg" class="content-img" title="Новые поступления"></a></div>
+		<div class="shop-item increase"><a href="/index.php?page=newProducts"><img src="images/shop/1.jpg" class="content-img" title="Новые поступления"></a></div>
 		<div class="shop-item increase"><a href="#"><img src="images/shop/2.jpg" class="content-img" title="Платья"></a></div>
 		<div class="shop-item increase"><a href="#"><img src="images/shop/3.jpg" class="content-img" title="Верхняя одежда"></a></div>
 		<div class="shop-item increase"><a href="#"><img src="images/shop/4.jpg" class="content-img" title="Топы и свитера"></a></div>

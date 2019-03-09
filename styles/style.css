@@ -90,6 +90,10 @@ footer{grid-area: footer;}
 	display: block;
 }
 
+nav>ul {
+	padding-inline-start: 0px;
+}
+
 .logo>img {
 	width: 100%;
     height: auto;

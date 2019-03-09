@@ -17,7 +17,6 @@
 					<li><a href="/index.php?page=shop" class="navLink" title="Магазин">Магазин</a></li>
 					<li><a href="/index.php?page=delivery" class="navLink" title="Доставка">Доставка</a></li>
 					<li><a href="/index.php?page=contact" class="navLink" title="Контакты">Контакты</a></li>
-					<li><a href="#" class="navLink" title="Сменить язык">English</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -42,7 +41,6 @@
 				<li><a href="/index.php?page=shop" class="navLink" title="Магазин">Магазин</a></li>
 				<li><a href="/index.php?page=delivery" class="navLink" title="Доставка">Доставка</a></li>
 				<li><a href="/index.php?page=contact" class="navLink" title="Контакты">Контакты</a></li>
-				<li><a href="#" class="navLink" title="Сменить язык">English</a></li>
 			</ul>
 		</nav>
 		<?php include('/func.php'); ?>
@@ -51,7 +49,7 @@
 			<img src="images/cards.png" class="cards" title="Способы оплаты">
 			<div class="socialButtons">
 				<div class="social vk">
-				    <a href="#" target="_blank" title="Группа вконтакте"><i class="fa fa-vk fa-2x"></i></a>    
+				    <a href="#" target="_blank" title="Группа вконтакте"><i class="fa fa-vk fa-2x"></i></a> 
 				</div>
 				<div class="social instagram">
 				    <a href="#" target="_blank" title="Инстаграмм"><i class="fa fa-instagram fa-2x"></i></a>
