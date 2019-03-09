@@ -79,4 +79,15 @@
 
 		return $openProducts;
 	}
+
+	function GET_mainProducts () {
+		global $connection;
+		$sql = "SELECT products.id, images.image_way 
+			FROM products
+			INNER JOIN images ON images.id_product = products.id GROUP BY products.id LIMIT 9";
+		$result = mysqli_query($connection, $sql);
+		$openProducts = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+		return $openProducts;
+	}
 ?>

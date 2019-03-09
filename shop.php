@@ -2,7 +2,7 @@
 		<ul id="menu">
 			<li class="first-li"><a href="/index.php?page=newProducts" title="Новые поступления">Новые поступления</a></li>
 			<li>
-				<a href="" title="Платья">Платья ↓</a>
+				<a href="/index.php?page=newProduct" title="Платья">Платья ↓</a>
 				<ul>
 					<li><a href="#" title="Платья из шерсти">Платья из шерсти</a></li>
 					<li><a href="#" title="Платья с кулиской">Платья с кулиской</a></li>

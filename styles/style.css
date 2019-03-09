@@ -146,6 +146,11 @@ nav.grid-item {
     object-fit: cover;
 }
 
+.mainIndex img {
+	max-height: 344px;
+	max-width: 344px;
+}
+
 /* shop.php -------------->*/
 .mainShop {
 	display: grid;
