@@ -2,7 +2,10 @@
 		<ul id="menu">
 			<li class="first-li"><a href="/index.php?page=newProducts" title="Новые поступления">Новые поступления</a></li>
 			<li>
-				<a href="/index.php?page=newProduct" title="Платья">Платья ↓</a>
+				<a href="/index.php?page=newProduct" title="Платья"><span id="getIt1">Платья</span><span> ↓</span></a>
+				<script>
+					var test = document.getElementById('getIt1').innerHTML;
+				</script>
 				<ul>
 					<li><a href="#" title="Платья из шерсти">Платья из шерсти</a></li>
 					<li><a href="#" title="Платья с кулиской">Платья с кулиской</a></li>
@@ -14,7 +17,7 @@
 				</ul>
 			</li>
 			<li>
-				<a href="" title="Верхняя одежда">Верхняя одежда ↓</a>
+				<a href="" title="Верхняя одежда"><span id="getIt2">Верхняя одежда</span><span> ↓</span></a>
 				<ul class="mobileWidthFix">
 					<li><a href="#" title="Стеганые пальто и куртки">Стеганные пальто и куртки</a></li>
 					<li><a href="#" title="Плащи">Плащи</a></li>
@@ -27,7 +30,7 @@
 			<li><a href="" title="Юбки и брюки">Юбки и брюки</a></li>
 			<li><a href="" title="Аксессуары">Аксессуары</a></li>
 			<li>
-				<a href="" title="Акции">Акции ↓</a>
+				<a href="" title="Акции"><span id="getIt2">Акции</span><span> ↓</span></a>
 				<ul class="mobileWidthFix">
 				<li><a href="#" title="Вещи со скидкой">Вещи со скидкой</a></li>
 				<li><a href="#" title="Подарочные сертификаты">Подарочные сертификаты</a></li>

@@ -57,7 +57,7 @@
 		echo '</pre>';
 	}
 
-	// Выводим последние добавленные на товары(новые поступления)
+	// get last items from DB
 	function GET_navNewProductItems () {
 		global $connection;
 		$sql = "SELECT products.id, images.image_way, products.title, products.price 
@@ -69,6 +69,7 @@
 		return $navNewProductItems;
 	}
 
+	// get openProduct for some id
 	function GET_openProducts ($product_id) {
 		global $connection;
 		$sql = "SELECT products.id, images.image_way, products.title, products.price, XS, S, M, L, XL, XXL 
@@ -80,6 +81,7 @@
 		return $openProducts;
 	}
 
+	// get mainItems
 	function GET_mainProducts () {
 		global $connection;
 		$sql = "SELECT products.id, images.image_way 
@@ -89,5 +91,17 @@
 		$openProducts = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
 		return $openProducts;
+	}
+
+	function GET_navProductItems ($nav) {
+		global $connection;
+		$sql = "SELECT products.id, images.image_way, products.title, products.price 
+			FROM products
+			INNER JOIN nav ON products.id = nav.id
+			INNER JOIN images ON images.id_product = products.id GROUP BY images.id_product";
+		$result = mysqli_query($connection, $sql);
+		$navNewProductItems = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+		return $navNewProductItems;
 	}
 ?>
