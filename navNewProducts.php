@@ -45,7 +45,7 @@
 	<div class="navProduct">
 		<?php foreach ($navNewProductItem as $navNewProductItems): ?>
 			<div class="navProductItem">
-				<div class="lowIncrease"><a href="/index.php?page=openProduct=<?php echo $navNewProductItems['id']; ?>"><img src="<?php echo $navNewProductItems['image_way']; ?>" class="content-img" alt="sss"></a></div>
+				<div class="lowIncrease"><a href="/index.php?page=<?php echo $navNewProductItems['id']; ?>"><img src="<?php echo $navNewProductItems['image_way']; ?>" class="content-img" alt="sss"></a></div>
 				<p><a href="#"><?php echo $navNewProductItems['title'] ?></a></p>
 				<p><?php echo $navNewProductItems['price'] ?>.00р.</p>
 			</div>

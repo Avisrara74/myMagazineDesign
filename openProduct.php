@@ -35,18 +35,22 @@
 			</li>
 		</ul>
 	<input type="text" class="shopSearch" placeholder="Поиск" title="Поиск">
-	
-	<div class="openProduct">
-		<img src="/images/shop/shop-items/01.jpg" onclick="switchImg1();" class="content-img productItem takeThisImg" alt="sss">
-		<img src="/images/shop/shop-items/012.jpg" onclick="switchImg2();" class="content-img productItem takeThisImg" alt="sss">
-		<img src="/images/shop/shop-items/13.jpg" onclick="switchImg3();" class="content-img productItem takeThisImg" alt="sss">
-		<img src="/images/shop/shop-items/14.jpg" onclick="switchImg4();" class="content-img productItem takeThisImg" alt="sss">
+	<?php 
+		$product_id = $_GET['page'];
+		$openProducts = GET_openProducts($product_id); 
+		$i = 0;
+	?>
+	<div class="openProduct">	
+			<img src="<?php echo $openProducts[0]['image_way']; ?>" onclick="switchImg1();" class="content-img productItem takeThisImg" alt="sss">
+			<img src="<?php echo $openProducts[1]['image_way']; ?>" onclick="switchImg2();" class="content-img productItem takeThisImg" alt="sss">
+			<img src="<?php echo $openProducts[2]['image_way']; ?>" onclick="switchImg3();" class="content-img productItem takeThisImg" alt="sss">
+			<img src="<?php echo $openProducts[3]['image_way']; ?>" onclick="switchImg4();" class="content-img productItem takeThisImg" alt="sss">
 		<div class="selectedImg productItem">
-			<img src="/images/shop/shop-items/01.jpg" class="content-img" id="switchThisImg" alt="sss">
+			<img src="<?php echo $openProducts[0]['image_way']; ?>" class="content-img" id="switchThisImg" alt="sss">
 		</div>
 		<div class="infoAbout productItem">
-			<h2>Какой-то длинный заголовок типо название платья</h2><br>
-			<p>6 800.00р</p>
+			<h2><?php echo $openProducts[0]['title']?></h2><br>
+			<p><?php echo $openProducts[0]['price']; ?>.00р.</p>
 			<h3>размер</h3>
 			<input type="radio" name="size1" class="size"><label for="size1">XS(42)</label><br>
 			<input type="radio" name="size2" class="size"><label for="size2">S(44)</label><br>
@@ -57,10 +61,6 @@
 			<button class="toBasket" title="В корзину">В корзину</button>
 		</div>	
 	</div>
-	<?php 
-		$openProducts = GET_openProducts($id); 
-		var_dump($openProducts);
-	?>
 
 	<div class="bottomButtons">
 		<a href="#" class="searchLink"><div class="searchButton"><img src="/images/shop/search.png" title="Поиск"><p>Поиск</p></div></a>

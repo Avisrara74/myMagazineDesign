@@ -66,4 +66,9 @@
 			</div>
 		</footer>
 	</body>
+	<?php
+
+	mysqli_close($connection);
+
+	?>
 </html>
