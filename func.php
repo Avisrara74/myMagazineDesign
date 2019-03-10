@@ -10,11 +10,54 @@
 		require('contact.php');
 	} elseif ($page == 'openProduct') {
 		require('openProduct.php');
-	} elseif ($page == 'navProduct') {
+
+	} elseif ($page == 'Новые поступления') {
 		require('navProduct.php');
-	} elseif ($page == 'newProducts') {
-		require('navNewProducts.php');
-	} elseif ($page == '1') {
+	} 
+
+
+	elseif ($page == 'Платья') {
+		require('navProduct.php');
+	} elseif ($page == 'Верхняя одежда') {
+		require('navProduct.php');
+	} 
+
+	elseif ($page == 'Платья из шерсти') {
+		require('navProduct.php');
+	} elseif ($page == 'Платья с кулиской') {
+		require('navProduct.php');
+	} elseif ($page == 'Платья на пуговицах') {
+		require('navProduct.php');
+	} elseif ($page == 'Платья покроя реглан') {
+		require('navProduct.php');
+	} elseif ($page == 'Прямые платья') {
+		require('navProduct.php');
+	} elseif ($page == 'Платья без рукава') {
+		require('navProduct.php');
+	} elseif ($page == 'Платья с коротким рукавом') {
+		require('navProduct.php');
+	} elseif ($page == 'Пальто с жилетом') {
+		require('navProduct.php');
+	} elseif ($page == 'Плащи') {
+		require('navProduct.php');
+	} elseif ($page == 'Шерстяные пальто') {
+		require('navProduct.php');
+	} elseif ($page == 'Зимние куртки и пальто') {
+		require('navProduct.php');
+	} elseif ($page == 'Короткие куртки') {
+		require('navProduct.php');
+	} elseif ($page == 'Топы и свитера') {
+		require('navProduct.php');
+	} elseif ($page == 'Юбки и брюки') {
+		require('navProduct.php');
+	} elseif ($page == 'Аксессуары') {
+		require('navProduct.php');
+	} elseif ($page == 'Подарочные сертификаты') {
+		require('navProduct.php');
+	} 
+
+
+	elseif ($page == '1') {
 		require('openProduct.php');
 	} elseif ($page == '2') {
 		require('openProduct.php');
@@ -50,7 +93,7 @@
 		require('openProduct.php');
 	}
 
-	// удобночитаемый дамп
+	// easy to read vardump
 	function vardump($var) {
 		echo '<pre>';
 		var_dump($var);
@@ -81,27 +124,42 @@
 		return $openProducts;
 	}
 
-	// get mainItems
+	// get main-page Items
 	function GET_mainProducts () {
 		global $connection;
 		$sql = "SELECT products.id, images.image_way 
 			FROM products
 			INNER JOIN images ON images.id_product = products.id GROUP BY products.id LIMIT 9";
 		$result = mysqli_query($connection, $sql);
-		$openProducts = mysqli_fetch_all($result, MYSQLI_ASSOC);
+		$mainProducts = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
-		return $openProducts;
+		return $mainProducts;
 	}
 
-	function GET_navProductItems ($nav) {
+	// get nav-items with subtitle
+	function GET_navMoreProductItems ($nav) {
 		global $connection;
 		$sql = "SELECT products.id, images.image_way, products.title, products.price 
 			FROM products
 			INNER JOIN nav ON products.id = nav.id
-			INNER JOIN images ON images.id_product = products.id GROUP BY images.id_product";
+			INNER JOIN nav1NF ON nav.id_nav1NF = nav1NF.id
+			INNER JOIN images ON images.id_product = products.id WHERE '$nav' = nav1NF.navName GROUP BY images.id_product";
 		$result = mysqli_query($connection, $sql);
-		$navNewProductItems = mysqli_fetch_all($result, MYSQLI_ASSOC);
+		$navMoreProductItems = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
-		return $navNewProductItems;
+		return $navMoreProductItems;
+	}
+
+	// get nav-items without subtitle
+	function GET_navSomeProductItems ($nav) {
+		global $connection;
+		$sql = "SELECT products.id, images.image_way, products.title, products.price 
+			FROM products
+			INNER JOIN nav ON products.id = nav.id
+			INNER JOIN images ON images.id_product = products.id WHERE '$nav' = nav.title_name GROUP BY images.id_product";
+		$result = mysqli_query($connection, $sql);
+		$navSomeProductItems = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+		return $navSomeProductItems;
 	}
 ?>
