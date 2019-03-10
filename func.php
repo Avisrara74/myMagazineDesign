@@ -141,7 +141,7 @@
 		global $connection;
 		$sql = "SELECT products.id, images.image_way, products.title, products.price 
 			FROM products
-			INNER JOIN nav ON products.id = nav.id
+			INNER JOIN nav ON products.id_nav = nav.id
 			INNER JOIN nav1NF ON nav.id_nav1NF = nav1NF.id
 			INNER JOIN images ON images.id_product = products.id WHERE '$nav' = nav1NF.navName GROUP BY images.id_product";
 		$result = mysqli_query($connection, $sql);
@@ -155,11 +155,12 @@
 		global $connection;
 		$sql = "SELECT products.id, images.image_way, products.title, products.price 
 			FROM products
-			INNER JOIN nav ON products.id = nav.id
+			INNER JOIN nav ON products.id_nav = nav.id
 			INNER JOIN images ON images.id_product = products.id WHERE '$nav' = nav.title_name GROUP BY images.id_product";
 		$result = mysqli_query($connection, $sql);
 		$navSomeProductItems = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
-		return $navSomeProductItems;
+		return $navSomeProductItems; 
+
 	}
 ?>

@@ -49,16 +49,70 @@
 			<img src="<?php echo $openProducts[0]['image_way']; ?>" class="content-img" id="switchThisImg" alt="sss">
 		</div>
 		<div class="infoAbout productItem">
-			<h2><?php echo $openProducts[0]['title']?></h2><br>
-			<p><?php echo $openProducts[0]['price']; ?>.00р.</p>
+			<h2><?php echo $openProducts[0]['title'] ?></h2><br>
+			<p><?php echo $openProducts[0]['price'] ?>.00р.</p>
 			<h3>размер</h3>
-			<input type="radio" name="size1" class="size"><label for="size1">XS(42)</label><br>
-			<input type="radio" name="size2" class="size"><label for="size2">S(44)</label><br>
-			<input type="radio" name="size3" class="size"><label for="size3">M(46)</label><br> 
-			<input type="radio" name="size4" class="size"><label for="size4">L(48)</label><br> 
-			<input type="radio" name="size5" class="size"><label for="size5">XL(50)</label><br>
-			<input type="radio" name="size6" class="size"><label for="size6">XXL(52)</label><br><br><br>  
-			<button class="toBasket" title="В корзину">В корзину</button>
+			<form>
+				<input type="radio" name="size" class="size">
+				<label for="size1">XS(42) - 
+					<?php if ($openProducts[0]['XS'] > 0) {
+						  echo $openProducts[0]['XS']; 
+						  } else {
+						  	echo 'НЕТ';
+						  }; 
+					?>
+				</label>
+				<br>	
+				<input type="radio" name="size" class="size">
+				<label for="size2">S(44) - 
+					<?php if ($openProducts[0]['S'] > 0) {
+						  echo $openProducts[0]['S']; 
+						  } else {
+						  	echo 'НЕТ';
+						  }; 
+					?>
+				</label>
+				<br>	
+				<input type="radio" name="size" class="size">
+				<label for="size3">M(46) - 
+					<?php if ($openProducts[0]['M'] > 0) {
+						  echo $openProducts[0]['M']; 
+						  } else {
+						  	echo 'НЕТ';
+						  }; 
+					?>
+				</label>
+				<br>		
+				<input type="radio" name="size" class="size">
+				<label for="size4">L(48) - 
+					<?php if ($openProducts[0]['L'] > 0) {
+						  echo $openProducts[0]['L']; 
+						  } else {
+						  	echo 'НЕТ';
+						  }; 
+					?>
+				</label><br>		
+				<input type="radio" name="size" class="size">
+				<label for="size5">XL(50) - 
+					<?php if ($openProducts[0]['XL'] > 0) {
+						  echo $openProducts[0]['XL']; 
+						  } else {
+						  	echo 'НЕТ В НАЛИЧИИ';
+						  }; 
+					?>
+				</label>
+				<br>		
+				<input type="radio" name="size" class="size">
+				<label for="size6">XXL(52) - 
+					<?php if ($openProducts[0]['XXL'] > 0) {
+						  echo $openProducts[0]['XXL']; 
+						  } else {
+						  	echo 'НЕТ';
+						  }; 
+					?>
+				</label>	
+				<button class="toBasket" title="В корзину">В корзину</button>
+			</form>
 		</div>	
 	</div>
 

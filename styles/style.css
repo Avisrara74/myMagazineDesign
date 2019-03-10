@@ -404,6 +404,7 @@ h2.afterNavProduct {
   cursor: pointer;
   text-transform: uppercase;
   font-weight: bold;
+  margin-top: 10px;
 } 
 
 .toBasket:hover { opacity: 0.75; }
