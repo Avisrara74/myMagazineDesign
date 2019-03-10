@@ -38,7 +38,6 @@
 	<?php 
 		$product_id = $_GET['page'];
 		$openProducts = GET_openProducts($product_id); 
-		$i = 0;
 	?>
 	<div class="openProduct">	
 			<img src="<?php echo $openProducts[0]['image_way']; ?>" onclick="switchImg1();" class="content-img productItem takeThisImg" alt="sss">

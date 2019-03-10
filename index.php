@@ -24,6 +24,7 @@
 			<div class="grid-item mobileMenuLink" title="Открыть/закрыть меню">Меню</div>
 		</a>
 		<script>
+		// open or close mobile nav-menu
 			function openMenu() {
 				if(document.getElementById('mobileNav').style.display === 'none'){
 					document.getElementById('mobileNav').style.display = 'block';
@@ -65,8 +66,6 @@
 		</footer>
 	</body>
 	<?php
-
-	mysqli_close($connection);
-
+		mysqli_close($connection);
 	?>
 </html>
