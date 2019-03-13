@@ -96,7 +96,7 @@
 					<?php if ($openProducts[0]['XL'] > 0) {
 						  echo $openProducts[0]['XL']; 
 						  } else {
-						  	echo 'НЕТ В НАЛИЧИИ';
+						  	echo 'НЕТ';
 						  }; 
 					?>
 				</label>
