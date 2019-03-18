@@ -1,4 +1,4 @@
-<?php include('/connectionDB.php');?>
+<?php include('./connectionDB.php');?>
 <!doctype html>
 <html lang="ru">
 	<head>
@@ -44,7 +44,7 @@
 				<li><a href="/index.php?page=contact" class="navLink" title="Контакты">Контакты</a></li>
 			</ul>
 		</nav>
-		<?php include('/func.php'); ?>
+		<?php include('./func.php'); ?>
 		<footer class="grid-item">
 			<p class="news">новости о новых коллекциях</p>
 			<img src="images/cards.png" class="cards" title="Способы оплаты">
