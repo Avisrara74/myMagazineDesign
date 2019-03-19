@@ -11,11 +11,15 @@
 		require('contact.php');
 	} elseif ($page == 'openProduct') {
 		require('openProduct.php');
+	}
 
-	} elseif ($page == 'Новые поступления') {
+	elseif ($page == 'search') {
+		require('search.php');
+	}
+
+	elseif ($page == 'Новые поступления') {
 		require('navProduct.php');
 	} 
-
 
 	elseif ($page == 'Платья') {
 		require('navProduct.php');
@@ -62,7 +66,7 @@
 	} 
 
 	// easy to read vardump
-	function vardump($var) {
+	function vardump ($var) {
 		echo '<pre>';
 		var_dump($var);
 		echo '</pre>';
@@ -72,14 +76,16 @@
 	// some content functions 
 
 	function bottomButtons () {
-		echo '<div class="bottomButtons">
+		echo 
+		'<div class="bottomButtons">
 			  <a href="#" class="searchLink"><div class="searchButton"><img src="/images/shop/search.png" title="Поиск"><p>Поиск</p></div></a>
 			  <a href="#" class="basketLink"><div class="basketButton"><img src="/images/shop/shop-basket.png" title="Корзина"><p>Корзина</p></div></a>
-			  </div>';
+		</div>';
 	}
 
 	function shopNav () {
-		echo '<ul id="menu">
+		echo 
+		'<ul id="menu">
 			<li class="first-li"><a href="/index.php?page=Новые поступления" title="Новые поступления">Новые поступления</a></li>
 			<li>
 				<a href="/index.php?page=Платья" title="Платья">Платья ↓</a>
@@ -114,70 +120,98 @@
 				</ul>
 			</li>
 		</ul>
-	<input type="text" class="shopSearch" placeholder="Поиск" title="Поиск">';
+		<form method="POST" action="/index.php?page=search">
+			<input type="text" name="shopSearch" class="shopSearch" placeholder="Что искать?" title="Поиск" required>
+		</form>';
+		
 	}
 
-	// get last items from DB
-	function GET_navNewProductItems () {
-		global $connection;
-		$sql = "SELECT products.id, images.image_way, products.title, products.price 
-			FROM products
-			INNER JOIN images ON images.id_product = products.id GROUP BY images.id_product DESC LIMIT 2, 10";
-		$result = mysqli_query($connection, $sql);
-		$navNewProductItems = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
-		return $navNewProductItems;
-	}
 
-	// get openProduct for some id
-	function GET_openProducts ($product_id) {
-		global $connection;
-		$sql = "SELECT products.id, images.image_way, products.title, products.price, XS, S, M, L, XL, XXL 
-			FROM products
-			INNER JOIN images ON images.id_product = products.id WHERE '$product_id' = products.id";
-		$result = mysqli_query($connection, $sql);
-		$openProducts = mysqli_fetch_all($result, MYSQLI_ASSOC);
+// DB queries {
 
-		return $openProducts;
-	}
+		// get last items from DB
+		function GET_navNewProductItems () {
+			global $connection;
+			$sql = "SELECT products.id, images.image_way, products.title, products.price 
+				FROM products
+				INNER JOIN images ON images.id_product = products.id GROUP BY images.id_product DESC LIMIT 2, 10";
+			$result = mysqli_query($connection, $sql);
+			$navNewProductItems = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
-	// get main-page Items
-	function GET_mainProducts () {
-		global $connection;
-		$sql = "SELECT products.id, images.image_way 
-			FROM products
-			INNER JOIN images ON images.id_product = products.id GROUP BY products.id LIMIT 9";
-		$result = mysqli_query($connection, $sql);
-		$mainProducts = mysqli_fetch_all($result, MYSQLI_ASSOC);
+			return $navNewProductItems;
+		}
 
-		return $mainProducts;
-	}
+		// get openProduct for some id
+		function GET_openProducts ($product_id) {
+			global $connection;
+			$sql = "SELECT products.id, images.image_way, products.title, products.price, XS, S, M, L, XL, XXL 
+				FROM products
+				INNER JOIN images ON images.id_product = products.id WHERE '$product_id' = products.id";
+			$result = mysqli_query($connection, $sql);
+			$openProducts = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
-	// get nav-items with subtitle
-	function GET_navMoreProductItems ($nav) {
-		global $connection;
-		$sql = "SELECT products.id, images.image_way, products.title, products.price 
-			FROM products
-			INNER JOIN nav ON products.id_nav = nav.id
-			INNER JOIN nav1NF ON nav.id_nav1NF = nav1NF.id
-			INNER JOIN images ON images.id_product = products.id WHERE '$nav' = nav1NF.navName GROUP BY images.id_product";
-		$result = mysqli_query($connection, $sql);
-		$navMoreProductItems = mysqli_fetch_all($result, MYSQLI_ASSOC);
+			return $openProducts;
+		}
 
-		return $navMoreProductItems;
-	}
+		// get main-page Items
+		function GET_mainProducts () {
+			global $connection;
+			$sql = "SELECT products.id, images.image_way 
+				FROM products
+				INNER JOIN images ON images.id_product = products.id GROUP BY products.id LIMIT 9";
+			$result = mysqli_query($connection, $sql);
+			$mainProducts = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
-	// get nav-items without subtitle
-	function GET_navSomeProductItems ($nav) {
-		global $connection;
-		$sql = "SELECT products.id, images.image_way, products.title, products.price 
-			FROM products
-			INNER JOIN nav ON products.id_nav = nav.id
-			INNER JOIN images ON images.id_product = products.id WHERE '$nav' = nav.title_name GROUP BY images.id_product";
-		$result = mysqli_query($connection, $sql);
-		$navSomeProductItems = mysqli_fetch_all($result, MYSQLI_ASSOC);
+			return $mainProducts;
+		}
 
-		return $navSomeProductItems; 
-	}
+		// get nav-items with subtitle
+		function GET_navMoreProductItems ($nav) {
+			global $connection;
+			$sql = "SELECT products.id, images.image_way, products.title, products.price 
+				FROM products
+				INNER JOIN nav ON products.id_nav = nav.id
+				INNER JOIN nav1NF ON nav.id_nav1NF = nav1NF.id
+				INNER JOIN images ON images.id_product = products.id WHERE '$nav' = nav1NF.navName GROUP BY images.id_product";
+			$result = mysqli_query($connection, $sql);
+			$navMoreProductItems = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+			return $navMoreProductItems;
+		}
+
+		// get nav-items without subtitle
+		function GET_navSomeProductItems ($nav) {
+			global $connection;
+			$sql = "SELECT products.id, images.image_way, products.title, products.price 
+				FROM products
+				INNER JOIN nav ON products.id_nav = nav.id
+				INNER JOIN images ON images.id_product = products.id WHERE '$nav' = nav.title_name GROUP BY images.id_product";
+			$result = mysqli_query($connection, $sql);
+			$navSomeProductItems = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+			return $navSomeProductItems; 
+		}
+
+		// get search-items
+		function GET_searchProductItems () {
+			$search = $_SESSION['search'];
+			global $connection;
+			$sql = "SELECT products.id, images.image_way, products.title, products.price 
+				FROM products
+				INNER JOIN nav ON products.id_nav = nav.id
+				INNER JOIN nav1NF ON nav.id_nav1NF = nav1NF.id
+				INNER JOIN images ON images.id_product = products.id 
+				WHERE products.title LIKE '%$search%' OR '$search%' OR '$search' OR '%$search'
+				OR nav1NF.navName LIKE '%$search%' OR '$search%' OR '$search' OR '%$search' 
+				OR nav.title_name LIKE '%$search%' OR '$search%' OR '$search' OR '%$search'
+				GROUP BY images.id_product";
+			$result = mysqli_query($connection, $sql);
+			$searchProductItems = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+			return $searchProductItems; 
+		}
+
+// DB queries }
 
 ?>
