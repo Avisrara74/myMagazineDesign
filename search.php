@@ -1,13 +1,16 @@
-<main class="mainShop"> 
-	<?php 
-		shopNav ();
-	?>
-
-	<?php 
+<?php 
 		if (isset($_POST['shopSearch'])) {
 			$_SESSION['search'] = $_POST['shopSearch'];
 		}
 		$searchProductItems = GET_searchProductItems ();
+		if (!isset($searchProductItems)) {
+			
+		}
+	?>
+
+<main class="mainShop"> 
+	<?php 
+		shopNav ();
 	?>
 
 	<h2 class="afterNavProduct"><?php echo $_SESSION['search']; ?></h2>
