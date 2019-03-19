@@ -1,4 +1,5 @@
 <?php 
+
 	$page = $_GET['page'];
 	if (!isset($page)) {
 		require('main.php');
@@ -56,42 +57,9 @@
 		require('navProduct.php');
 	} 
 
-
-	elseif ($page == '1') {
+	elseif (is_numeric($page)) {
 		require('openProduct.php');
-	} elseif ($page == '2') {
-		require('openProduct.php');
-	} elseif ($page == '3') {
-		require('openProduct.php');
-	} elseif ($page == '4') {
-		require('openProduct.php');
-	} elseif ($page == '5') {
-		require('openProduct.php');
-	} elseif ($page == '6') {
-		require('openProduct.php');
-	} elseif ($page == '7') {
-		require('openProduct.php');
-	} elseif ($page == '8') {
-		require('openProduct.php');
-	} elseif ($page == '9') {
-		require('openProduct.php');
-	} elseif ($page == '10') {
-		require('openProduct.php');
-	} elseif ($page == '11') {
-		require('openProduct.php');
-	} elseif ($page == '12') {
-		require('openProduct.php');
-	} elseif ($page == '13') {
-		require('openProduct.php');
-	} elseif ($page == '14') {
-		require('openProduct.php');
-	} elseif ($page == '15') {
-		require('openProduct.php');
-	} elseif ($page == '16') {
-		require('openProduct.php');
-	} elseif ($page == '17') {
-		require('openProduct.php');
-	}
+	} 
 
 	// easy to read vardump
 	function vardump($var) {
