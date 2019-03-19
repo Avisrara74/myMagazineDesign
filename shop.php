@@ -49,7 +49,7 @@
 
 	<div class="bottomButtons">
 		<a href="#" class="searchLink"><div class="searchButton"><img src="/images/shop/search.png" title="Поиск"><p>Поиск</p></div></a>
-		<a href="#" class="likeLink"><div class="likeButton"><img src="/images/shop/like.png" title="Избранное"><p>Избранное</p></div></a>
+		
 		<a href="#" class="basketLink"><div class="basketButton"><img src="/images/shop/shop-basket.png" title="Корзина"><p>Корзина</p></div></a>
 	</div>
 </main>
