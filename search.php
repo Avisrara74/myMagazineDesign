@@ -1,15 +1,18 @@
 <?php 
-		if (isset($_POST['shopSearch'])) {
-			$_SESSION['search'] = $_POST['shopSearch'];
-		}
-		$searchProductItems = GET_searchProductItems ();
-		if (!isset($searchProductItems)) {
-			
-		}
-	?>
+	if (isset($_POST['shopSearch'])) {
+		$_SESSION['search'] = $_POST['shopSearch'];
+	}
+	$searchProductItems = GET_searchProductItems ();
+	if (empty($searchProductItems)) {
+		$_SESSION['search'] = 'Ничего не найдено. Может вас заинтересуют эти товары';
+		$searchProductItems = GET_navNewProductItems ();
+		shuffle($searchProductItems);
+	}
+?>
 
 <main class="mainShop"> 
 	<?php 
+	// from func.php
 		shopNav ();
 	?>
 
@@ -24,7 +27,9 @@
 		<?php endforeach; ?>
 	</div>
 
+	
 	<?php 
+	// from func.php
 		bottomButtons ();
 	?>
 </main>

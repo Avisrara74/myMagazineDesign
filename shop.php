@@ -1,5 +1,6 @@
 <main class="mainShop">  
 	<?php 
+	// from func.php
 		shopNav ();
 	?>
 	<?php
@@ -23,6 +24,7 @@
 	</div>
 
 	<?php 
+	// from func.php
 		bottomButtons ();
 	?>
 </main>
