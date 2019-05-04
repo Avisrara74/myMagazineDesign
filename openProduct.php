@@ -8,10 +8,10 @@
 		$openProducts = GET_openProducts($product_id); 
 	?>
 	<div class="openProduct">	
-			<img src="<?php echo $openProducts[0]['image_way']; ?>" onclick="switchImg1();" class="content-img productItem takeThisImg" alt="sss">
-			<img src="<?php echo $openProducts[1]['image_way']; ?>" onclick="switchImg2();" class="content-img productItem takeThisImg" alt="sss">
-			<img src="<?php echo $openProducts[2]['image_way']; ?>" onclick="switchImg3();" class="content-img productItem takeThisImg" alt="sss">
-			<img src="<?php echo $openProducts[3]['image_way']; ?>" onclick="switchImg4();" class="content-img productItem takeThisImg" alt="sss">
+			<img src="<?php echo $openProducts[0]['image_way']; ?>" onclick="switchImg1();" class="content-img productItem takeThisImg low_opacity" alt="sss">
+			<img src="<?php echo $openProducts[1]['image_way']; ?>" onclick="switchImg2();" class="content-img productItem takeThisImg low_opacity" alt="sss">
+			<img src="<?php echo $openProducts[2]['image_way']; ?>" onclick="switchImg3();" class="content-img productItem takeThisImg low_opacity" alt="sss">
+			<img src="<?php echo $openProducts[3]['image_way']; ?>" onclick="switchImg4();" class="content-img productItem takeThisImg low_opacity" alt="sss">
 		<div class="selectedImg productItem">
 			<img src="<?php echo $openProducts[0]['image_way']; ?>" class="content-img" id="switchThisImg" alt="sss">
 		</div>

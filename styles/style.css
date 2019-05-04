@@ -371,6 +371,12 @@ h2.afterNavProduct {
 	grid-area: 1 / 7 / 5 / 10;
 	margin-left: 10px;
 }
+.low_opacity {
+	opacity: 0.75;
+}
+.low_opacity:hover {
+	opacity: 1;
+}
 .infoAbout {
 	grid-template-columns: 1fr;
 	grid-template-rows: 1fr;
